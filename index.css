@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(42, 41, 41);
+}
+
+#parent {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 100px 10px;
+    animation: moveParent 2s linear 0s forwards;
+}
+
+#parent img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    animation: rotateAndZoom 4s linear 0s forwards;
+}
+
+/* Image rotation + zoom combined */
+@keyframes rotateAndZoom {
+    0% {
+        transform: rotate(0deg) scale3d(1, 1, 1);
+        border-radius: 0%;
+    }
+    25% {
+        transform: rotate(90deg) scale3d(1.3, 1.3, 1.3);
+        border-radius: 10%;
+    }
+    50% {
+        transform: rotate(180deg) scale3d(1.6, 1.6, 1.6);
+        border-radius: 20%;
+    }
+    75% {
+        transform: rotate(270deg) scale3d(2, 2, 2);
+        border-radius: 30%;
+    }
+    100% {
+        transform: rotate(360deg) scale3d(3, 3, 3);
+        border-radius: 50%;
+    }
+}
+
+/* Parent horizontal movement */
+@keyframes moveParent {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(10vw); }
+    50% { transform: translateX(20vw); }
+    75% { transform: translateX(30vw); }
+    100% { transform: translateX(40vw); }
+}
