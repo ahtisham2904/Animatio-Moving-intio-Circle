@@ -8,14 +8,12 @@ body{
 }
 #parent{
     display: flex;
-    width: 500px;
-    height: 500px;
     margin: 100px 10px;
     animation: rotate 2s linear 0s forwards;
 }
 #parent img{
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 10vw;
     object-fit: cover;
     animation: rotatePic 2s linear 0s forwards,rotateZoom 2s linear 2s forwards;;
 }
